@@ -183,7 +183,7 @@ body::after {
   transition: background-color .3s, transform .5s cubic-bezier(.7,0,.2,1), opacity .4s;
 }
 .callfab:hover { background: var(--brand-deep); }
-.callfab i { position: relative; width: 42px; height: 42px; border-radius: 50%; background: rgba(255,255,255,.16); display: grid; place-items: center; }
+.callfab i { position: relative; width: 42px; height: 42px; border-radius: 50%; background: #25d366; display: grid; place-items: center; }
 .callfab i::after { content: ''; position: absolute; inset: 0; border-radius: 50%; border: 1px solid rgba(255,255,255,.7); animation: ring 2.4s ease-out infinite; }
 .callfab svg { width: 19px; height: 19px; fill: currentColor; }
 .callfab.is-hidden, .menu-open .callfab { opacity: 0; transform: translateY(140%); pointer-events: none; }

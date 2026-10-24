@@ -8,6 +8,7 @@ export const site = {
   url: 'https://bouvierautomobile.com',
   phone: '06 33 27 37 61',
   phoneHref: 'tel:+33633273761',
+  whatsapp: `https://wa.me/33633273761?text=${encodeURIComponent('Bonjour, je vous contacte depuis le site Bouvier Automobile.')}`,
   email: 'fabrice@bouvierautomobile.com',
   city: 'Aix-les-Bains',
   postal: '73100',

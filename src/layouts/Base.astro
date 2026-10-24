@@ -1,6 +1,7 @@
 ---
 import '../styles/global.css';
 import { site, nav, services } from '../data/site.js';
+import { siWhatsapp } from 'simple-icons';
 import logoRaw from '../../public/brand/full.svg?raw';
 // vrai logo (BOUVIER AUTOMOBILE + voiture « BA » + LOCATION DE VÉHICULES), vectorisé depuis l'ancien site
 const logo = (cls) => logoRaw.replace(/<svg([^>]*)>/, `<svg class="${cls}"$1 aria-hidden="true" focusable="false">`).replace(' xmlns="http://www.w3.org/2000/svg"', '');
@@ -87,8 +88,8 @@ const ld = [dealer, ...schema];
     </div>
   </div>
 
-  <a class="callfab" id="callFab" href={site.phoneHref} aria-label={`Appeler Bouvier Automobile au ${site.phone}`}>
-    <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2Z"/></svg></i>
+  <a class="callfab" id="callFab" href={site.whatsapp} target="_blank" rel="noopener" aria-label={`Écrire à Bouvier Automobile sur WhatsApp au ${site.phone}`}>
+    <i aria-hidden="true"><svg viewBox="0 0 24 24"><path d={siWhatsapp.path} /></svg></i>
     <span>{site.phone}</span>
   </a>
 
