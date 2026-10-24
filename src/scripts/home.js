@@ -6,7 +6,9 @@ const pad = (n) => String(n).padStart(3, '0');
 function createSequence(canvas) {
   const A = +canvas.dataset.a;
   const B = +canvas.dataset.b;
-  const urls = [...Array(A)].map((_, i) => `/hero/a-${pad(i + 1)}.webp`).concat([...Array(B)].map((_, i) => `/hero/b-${pad(i + 1)}.webp`));
+  // téléphone tenu droit : images portrait 720×1440 cadrées sur la voiture, au lieu du 16:9 rogné
+  const dir = matchMedia('(max-width: 900px) and (orientation: portrait)').matches ? '/hero/m/' : '/hero/';
+  const urls = [...Array(A)].map((_, i) => `${dir}a-${pad(i + 1)}.webp`).concat([...Array(B)].map((_, i) => `${dir}b-${pad(i + 1)}.webp`));
   const imgs = new Array(urls.length);
   const ctx = canvas.getContext('2d');
   let want = 0;

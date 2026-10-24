@@ -1,11 +1,12 @@
 ---
 import Base from '../layouts/Base.astro';
+import Pic from '../components/Pic.astro';
 import { site } from '../data/site.js';
 const map = `https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&z=14&hl=fr&output=embed`;
 ---
 <Base footer="/media/208-lac.webp" title="Contact" description={`Bouvier Automobile, location de véhicules à Aix-les-Bains, Chambéry et Annecy. Tél. ${site.phone}, e-mail ${site.email}. Réservation en ligne sur Turo et Getaround.`}>
   <section class="phero" id="top">
-    <div class="phero__media"><img src="/media/aygo-face.webp" alt="Toyota Aygo blanche de Bouvier Automobile" /></div>
+    <div class="phero__media"><Pic src="/media/aygo-face.webp" alt="Toyota Aygo blanche de Bouvier Automobile" /></div>
     <div class="phero__inner">
       <span class="label">Aix-les-Bains · Chambéry · Annecy</span>
       <h1 class="js-chars">Nous contacter</h1>
@@ -69,5 +70,6 @@ const map = `https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&
     .ct__maptitle { font-family: var(--serif); font-size: var(--fs-h3); }
     .ct__mapbtn small { color: var(--muted); font-size: 14px; }
     @media (max-width: 900px) { .ct { grid-template-columns: 1fr; } }
+    @media (max-width: 900px) and (orientation: portrait) { .ct__map { background-image: url(/media/m/kangoo-face.webp); } }
   </style>
 </Base>

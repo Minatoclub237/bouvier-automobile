@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Pic from '../components/Pic.astro';
 import { site } from '../data/site.js';
 const chapters = [
   { k: 'Les débuts', t: 'Louer simplement, au juste prix', p: 'Fabrice Bouvier commence par louer ses voitures entre particuliers, sur Turo et Getaround, autour d’Aix-les-Bains. Son idée : des véhicules fiables, propres et prêts pour la montagne, loués simplement et au meilleur prix.', img: '/media/c1-annecy' },
@@ -9,7 +10,7 @@ const chapters = [
 ---
 <Base footer="/media/c1-route.webp" title="Qui sommes-nous" description="Bouvier Automobile, entreprise locale fondée par Fabrice Bouvier : location de voitures et d’utilitaires à Aix-les-Bains, Chambéry et Annecy, achat-revente et reprise de véhicules.">
   <section class="phero" id="top">
-    <div class="phero__media"><img src="/media/twingo.webp" alt="La Renault Twingo rouge de Bouvier Automobile" /></div>
+    <div class="phero__media"><Pic src="/media/twingo.webp" alt="La Renault Twingo rouge de Bouvier Automobile" /></div>
     <div class="phero__inner">
       <span class="label">Bouvier Automobile · Aix-les-Bains</span>
       <h1 class="js-chars">Qui sommes-nous</h1>

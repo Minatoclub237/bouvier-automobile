@@ -1,7 +1,9 @@
 /* ============ 1. HERO : séquence vidéo pilotée au scroll ============ */
 .hero { position: relative; height: 100vh; height: 100svh; }
 .hero__stage { position: relative; height: 100vh; height: 100svh; overflow: hidden; background: #050506; }
-.hero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; background: #050506 center / cover no-repeat; }
+.hero__canvas { position: absolute; inset: 0; width: 100%; height: 100%; background: #050506 url(/hero/a-001.webp) center / cover no-repeat; }
+/* téléphone tenu droit : séquence portrait recadrée sur la voiture (public/hero/m) */
+@media (max-width: 900px) and (orientation: portrait) { .hero__canvas { background-image: url(/hero/m/a-001.webp); } }
 .hero__shade { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to bottom, rgba(5,5,6,.55), transparent 30%, transparent 62%, rgba(5,5,6,.85)); }
 .hero__veil { position: absolute; inset: 0; background: #111113; opacity: 0; pointer-events: none; }
 .hero__title { position: absolute; left: 0; right: 0; top: 17vh; z-index: 5; text-align: center; font-size: var(--fs-hero); line-height: 1.02; text-shadow: 0 2px 40px rgba(0,0,0,.6); padding: 0 var(--gut); }

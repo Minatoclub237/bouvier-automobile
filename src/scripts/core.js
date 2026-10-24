@@ -130,6 +130,10 @@ document.addEventListener('click', (e) => {
 });
 
 /* ---------- vidéos : lecture uniquement à l'écran ---------- */
+// téléphone tenu droit : boucle et affiche en version portrait 720×1280 quand elle existe (attribut data-m)
+if (matchMedia('(max-width: 900px) and (orientation: portrait)').matches) {
+  $$('video[data-m]').forEach((v) => { v.dataset.src = v.dataset.src.replace(/\.mp4$/, '-m.mp4'); v.poster = v.getAttribute('poster').replace(/\.webp$/, '-m.webp'); });
+}
 const vio = new IntersectionObserver((entries) => {
   for (const e of entries) {
     const v = e.target;

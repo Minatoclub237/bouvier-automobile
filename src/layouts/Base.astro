@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import { site, nav, services } from '../data/site.js';
 import { siWhatsapp } from 'simple-icons';
+import Pic from '../components/Pic.astro';
 import logoRaw from '../../public/brand/full.svg?raw';
 // vrai logo (BOUVIER AUTOMOBILE + voiture « BA » + LOCATION DE VÉHICULES), vectorisé depuis l'ancien site
 const logo = (cls) => logoRaw.replace(/<svg([^>]*)>/, `<svg class="${cls}"$1 aria-hidden="true" focusable="false">`).replace(' xmlns="http://www.w3.org/2000/svg"', '');
@@ -102,8 +103,8 @@ const ld = [dealer, ...schema];
   <footer class="footer" id="contact-footer">
     <div class="footer__hero">
     <div class="footer__media" id="footerMedia" aria-hidden="true">
-      <img class="footer__dim" src={footer} alt="" loading="lazy" />
-      <img class="footer__lit" src={footer} alt="" loading="lazy" />
+      <Pic class="footer__dim" src={footer} loading="lazy" />
+      <Pic class="footer__lit" src={footer} loading="lazy" />
     </div>
     <div class="footer__content">
       <span class="label">Besoin d’un véhicule ?</span>

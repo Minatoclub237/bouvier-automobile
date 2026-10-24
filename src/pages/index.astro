@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import Pic from '../components/Pic.astro';
 import '../styles/home.css';
 import { site, services, steps, pillars } from '../data/site.js';
 import fleet from '../data/fleet.json';
@@ -15,12 +16,13 @@ const row = [...logos, ...logos, ...logos];
 const clip = (t, n = 250) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) + '…' : t);
 ---
 <Base footer="/media/twingo-route.webp" description="Bouvier Automobile, location de voitures et d’utilitaires à Aix-les-Bains, Chambéry et Annecy sur Turo et Getaround, achat-revente et reprise de véhicules. Plus de 350 locations, 4,9 / 5 de moyenne.">
-  <link slot="head" rel="preload" as="image" href="/hero/a-001.webp" fetchpriority="high" />
+  <link slot="head" rel="preload" as="image" href="/hero/a-001.webp" media="not all and (max-width: 900px) and (orientation: portrait)" fetchpriority="high" />
+  <link slot="head" rel="preload" as="image" href="/hero/m/a-001.webp" media="(max-width: 900px) and (orientation: portrait)" fetchpriority="high" />
 
   <!-- 1. HERO : la caméra plonge sur le capot puis entre dans l'habitacle, au rythme du scroll -->
   <section class="hero" id="top">
     <div class="hero__stage">
-      <canvas class="hero__canvas" id="heroCanvas" data-a="105" data-b="30" style="background-image:url(/hero/a-001.webp)" aria-hidden="true"></canvas>
+      <canvas class="hero__canvas" id="heroCanvas" data-a="105" data-b="30" aria-hidden="true"></canvas>
       <div class="hero__shade"></div>
       <div class="hero__veil" id="heroVeil"></div>
 
@@ -39,7 +41,7 @@ const clip = (t, n = 250) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) +
       <!-- 2. MÉTHODE : le cadre s'ouvre depuis le centre -->
       <div class="approach" id="methode">
         <div class="approach__frame">
-          <video class="approach__media" id="approachVideo" muted loop playsinline preload="none" poster="/loops/lac.webp" data-src="/loops/lac.mp4" aria-hidden="true"></video>
+          <video class="approach__media" id="approachVideo" muted loop playsinline preload="none" poster="/loops/lac.webp" data-m data-src="/loops/lac.mp4" aria-hidden="true"></video>
           <div class="approach__shade"></div>
           <div class="approach__content">
             <div class="approach__head">
@@ -141,7 +143,7 @@ const clip = (t, n = 250) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) +
 
   <!-- 7. FLOTTE → REPRISE : la section suivante recouvre la précédente -->
   <section class="cover cover--a" id="flotte-teaser">
-    <div class="cover__media"><img src="/media/308-lac-trois-quarts.webp" alt="Peugeot 308 rouge de Bouvier Automobile face au lac" loading="lazy" /></div>
+    <div class="cover__media"><Pic src="/media/308-lac-trois-quarts.webp" alt="Peugeot 308 rouge de Bouvier Automobile face au lac" loading="lazy" /></div>
     <div class="cover__content">
       <h2 class="cover__title js-chars">Nos véhicules</h2>
       <p>{fleet.length} modèles à louer, des citadines aux utilitaires, à Aix-les-Bains et à Annecy. Réservation en ligne, assurance comprise.</p>
@@ -149,7 +151,7 @@ const clip = (t, n = 250) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) +
     </div>
   </section>
   <section class="cover cover--b">
-    <div class="cover__media"><img src="/media/megane-rs.webp" alt="Renault Mégane R.S. orange" loading="lazy" /></div>
+    <div class="cover__media"><Pic src="/media/megane-rs.webp" alt="Renault Mégane R.S. orange" loading="lazy" /></div>
     <div class="cover__content">
       <h2 class="cover__title js-chars">Vous vendez ?</h2>
       <p>Nous reprenons votre véhicule, roulant ou non, en bon état ou à réparer. Une estimation rapide, une offre juste et un rachat simplifié.</p>

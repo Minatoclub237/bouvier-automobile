@@ -1,0 +1,12 @@
+---
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
+// image plein écran : version portrait 1080×1920 (public/media/m) pour un téléphone tenu droit, si elle existe
+const { src, alt = '', class: cls, loading } = Astro.props;
+const m = src.startsWith('/media/') ? src.replace('/media/', '/media/m/') : null;
+const hasM = m && existsSync(join(process.cwd(), 'public', m));
+---
+<picture>
+  {hasM && <source media="(max-width: 900px) and (orientation: portrait)" srcset={m} />}
+  <img src={src} alt={alt} class={cls} loading={loading} />
+</picture>
