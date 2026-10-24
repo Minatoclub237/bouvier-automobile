@@ -9,9 +9,9 @@
   --muted: #a19c97;
   --dim: rgba(243, 241, 237, 0.16);
   --line: rgba(243, 241, 237, 0.14);
-  --brand: #8c3b3b;
-  --brand-deep: #641413;
-  --accent: #c4474d;
+  --brand: #1f4b99;
+  --brand-deep: #102341;
+  --accent: #5b8def;
   --serif: 'Instrument Serif', 'Times New Roman', serif;
   --sans: 'Inter Variable', 'Inter', system-ui, sans-serif;
   --gut: max(20px, 3.4vw);
@@ -219,6 +219,7 @@ body::after {
 .footer__social a { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; color: var(--ink); transition: background-color .3s, border-color .3s; }
 .footer__social a:hover { background: var(--brand); border-color: var(--brand); }
 .footer__social svg { width: 20px; height: 20px; }
+.footer__social a.is-text { display: flex; white-space: nowrap; width: auto; padding: 0 20px; border-radius: 24px; font-size: 15px; font-weight: 600; }
 .footer__main h4 { margin: 0 0 20px; font-size: var(--fs-label); font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
 .footer__main ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
 .footer__main li { font-size: 16px; line-height: 1.5; color: #e3dfda; }

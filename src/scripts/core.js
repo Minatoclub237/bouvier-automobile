@@ -11,7 +11,7 @@ export const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 export const touch = matchMedia('(hover: none)').matches;
 export const mobile = () => innerWidth <= 900;
 export const DIM = 'rgba(243, 241, 237, 0.16)';
-export const ACCENT = '#c4474d';
+export const ACCENT = '#5b8def';
 export const INK = '#f3f1ed';
 
 document.documentElement.classList.add('js');
@@ -141,7 +141,7 @@ const vio = new IntersectionObserver((entries) => {
 }, { rootMargin: '25% 0px' });
 $$('video[data-autoplay]').forEach((v) => { v.muted = true; v.playsInline = true; vio.observe(v); });
 
-/* ---------- lettre à lettre : gris → bordeaux → blanc ---------- */
+/* ---------- lettre à lettre : gris → bleu → blanc ---------- */
 export function charsTween(chars, opts = {}) {
   return gsap.to(chars, { keyframes: { color: [DIM, ACCENT, INK], easeEach: 'none' }, ease: 'none', duration: opts.duration ?? 0.5, stagger: opts.stagger ?? 0.08, ...opts.vars });
 }
@@ -217,7 +217,7 @@ $$('form[data-mailto]').forEach((form) => {
     const lines = [];
     for (const [k, v] of data) if (k !== 'consent' && String(v).trim()) lines.push(`${form.querySelector(`[name="${k}"]`)?.dataset.label || k} : ${v}`);
     const subject = encodeURIComponent(form.dataset.subject || 'Demande depuis le site');
-    const body = encodeURIComponent(lines.join('\n') + '\n\n— Envoyé depuis next-drive.fr');
+    const body = encodeURIComponent(lines.join('\n') + '\n\n— Envoyé depuis bouvierautomobile.com');
     location.href = `mailto:${form.dataset.mailto}?subject=${subject}&body=${body}`;
     if (form.dataset.redirect) setTimeout(() => { location.href = form.dataset.redirect; }, 900);
   });

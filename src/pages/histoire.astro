@@ -2,18 +2,18 @@
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site.js';
 const chapters = [
-  { k: 'Les débuts', t: 'Une passion, un constat', p: 'Next Drive est né de deux passionnés d’automobile, Jérémy et Téo — le « JT » de JT Next Drive. Leur constat : vendre sa voiture entre particuliers, c’est souvent du stress, du temps perdu et des acheteurs peu fiables.', img: '/media/golf-v' },
-  { k: 'Le modèle', t: 'Le sérieux d’un pro, le prix d’un particulier', p: 'Ils ont repensé l’intermédiation : un service premium qui apporte la tranquillité d’un professionnel tout en gardant la rentabilité d’une vente entre particuliers. Sans frais pour le vendeur.', img: '/media/rs6-interieur' },
-  { k: 'Aujourd’hui', t: 'Un showroom de 400 m² à Saint-Béron', p: `Depuis ${site.founded}, vendeurs et acheteurs se croisent dans notre showroom de l’Avant-Pays savoyard. ${site.rating.count} avis Google, tous à 5 étoiles : transparence, sécurité et accompagnement restent notre ligne.`, img: '/media/rs6-arriere' },
+  { k: 'Les débuts', t: 'Louer simplement, au juste prix', p: 'Fabrice Bouvier commence par louer ses voitures entre particuliers, sur Turo et Getaround, autour d’Aix-les-Bains. Son idée : des véhicules fiables, propres et prêts pour la montagne, loués simplement et au meilleur prix.', img: '/media/twingo' },
+  { k: 'La confiance', t: 'Plus de 350 locations', p: `Plus de 350 locations et une note moyenne de ${site.rating.value} / 5 sur ${site.rating.count} avis. Sur Turo, Bouvier Automobile a le statut « Hôte Star », réservé aux hôtes les mieux notés et les plus fiables.`, img: '/media/308-lac-arriere' },
+  { k: 'Aujourd’hui', t: 'Location, achat et revente', p: `En ${site.incorporated}, l’activité devient la société ${site.legal}. Six modèles à louer à Aix-les-Bains et à Annecy, et un nouveau métier : l’achat, la revente et la reprise de véhicules sélectionnés avec soin.`, img: '/media/c1-annecy' },
 ];
 ---
-<Base title="Notre histoire" description="Next Drive, fondé à Saint-Béron (Savoie) par Jérémy et Téo, réinvente la vente de voitures d’occasion entre particuliers : dépôt-vente sans frais, paiement sécurisé, accompagnement de A à Z.">
+<Base title="Qui sommes-nous" description="Bouvier Automobile, entreprise locale fondée par Fabrice Bouvier : location de voitures et d’utilitaires à Aix-les-Bains, Chambéry et Annecy, achat-revente et reprise de véhicules.">
   <section class="phero" id="top">
-    <div class="phero__media"><img src="/media/facade.webp" alt="Le bâtiment Next Drive, 106 chemin de la Girondière à Saint-Béron" /></div>
+    <div class="phero__media"><img src="/media/308-lac-large.webp" alt="La Peugeot 308 de Bouvier Automobile au bord du lac" /></div>
     <div class="phero__inner">
-      <span class="label">JT Next Drive · depuis {site.founded}</span>
-      <h1 class="js-chars">Notre histoire</h1>
-      <p>Deux passionnés, un showroom, une promesse : rendre la vente d’une voiture d’occasion simple, sûre et rentable.</p>
+      <span class="label">Bouvier Automobile · Aix-les-Bains</span>
+      <h1 class="js-chars">Qui sommes-nous</h1>
+      <p>Votre partenaire automobile de confiance : des voitures fiables, propres et au meilleur prix, entre le lac du Bourget et Annecy.</p>
     </div>
   </section>
 
@@ -35,8 +35,8 @@ const chapters = [
   <section class="section section--tight">
     <div class="team">
       <div class="js-reveal"><span class="label">Président</span><h3>{site.president}</h3></div>
-      <div class="js-reveal"><span class="label">Directeur général</span><h3>{site.dg}</h3></div>
-      <div class="js-reveal"><span class="label">Note Google</span><h3>{site.rating.value} / 5 · {site.rating.count} avis</h3></div>
+      <div class="js-reveal"><span class="label">Turo</span><h3>Hôte Star · {site.ratings.turo.trips} voyages</h3></div>
+      <div class="js-reveal"><span class="label">Note moyenne</span><h3>{site.rating.value} / 5 · {site.rating.count} avis</h3></div>
     </div>
   </section>
 

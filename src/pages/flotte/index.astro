@@ -1,0 +1,57 @@
+---
+import Base from '../../layouts/Base.astro';
+import CarCard from '../../components/CarCard.astro';
+import fleet from '../../data/fleet.json';
+import { site } from '../../data/site.js';
+
+const schema = [{
+  '@context': 'https://schema.org', '@type': 'ItemList', name: 'Véhicules à louer chez Bouvier Automobile',
+  numberOfItems: fleet.length,
+  itemListElement: fleet.map((v, i) => ({ '@type': 'ListItem', position: i + 1, url: `${site.url}/flotte/${v.slug}`, name: `${v.marque} ${v.modele} ${v.annee}` })),
+}];
+---
+<Base title="Location de voitures et d’utilitaires" description="Peugeot 308 et 208, Renault Twingo, Toyota Aygo, Citroën C1 et Renault Kangoo : les véhicules de Bouvier Automobile à louer à Aix-les-Bains et Annecy, sur Turo et Getaround." schema={schema}>
+  <section class="phero" id="top">
+    <div class="phero__media"><video data-autoplay muted loop playsinline preload="none" poster="/loops/flotte.webp" data-src="/loops/flotte.mp4" aria-hidden="true"></video></div>
+    <div class="phero__inner">
+      <span class="label">Location · Aix-les-Bains · Annecy</span>
+      <h1 class="js-chars">Nos véhicules</h1>
+      <p>Citadines, compacte cinq places et utilitaires : des voitures entretenues, prêtes à prendre la route. Réservation en ligne sur Turo et Getaround, assurance comprise.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <p class="fleet__count"><b>{fleet.length}</b> modèles · {site.rentals} locations réalisées · {site.rating.value} / 5 de moyenne</p>
+    <div class="cars">
+      {fleet.map((v) => <CarCard v={v} />)}
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="book">
+      <div class="book__text">
+        <span class="label">Réserver</span>
+        <h2 class="js-chars">Tarifs et disponibilités en temps réel</h2>
+        <p>Les prix varient selon les dates et la durée. Retrouvez tous nos véhicules sur nos profils Turo et Getaround, ou appelez-nous pour une demande particulière.</p>
+        <div class="ctas">
+          <a class="cta cta--fill" href={site.turo} target="_blank" rel="noopener"><span>Voir sur Turo</span><b aria-hidden="true">→</b></a>
+          <a class="cta" href={site.getaround} target="_blank" rel="noopener"><span>Voir sur Getaround</span><b aria-hidden="true">→</b></a>
+          <a class="cta" href={site.phoneHref}><span>{site.phone}</span><b aria-hidden="true">→</b></a>
+        </div>
+      </div>
+      <figure class="book__img js-reveal"><img src="/media/flyer.webp" alt="Flyer Bouvier Automobile avec les QR codes des profils Turo et Getaround" loading="lazy" /></figure>
+    </div>
+  </section>
+
+  <style>
+    .fleet__count { color: var(--muted); margin-bottom: 30px; }
+    .fleet__count b { color: var(--ink); font-size: 20px; }
+    .book { display: grid; grid-template-columns: 1fr 1fr; gap: 6vw; align-items: center; border-top: 1px solid var(--line); padding-top: 8vh; }
+    .book__text { display: grid; gap: 20px; }
+    .book__text h2 { font-size: var(--fs-h2); }
+    .book__text p { color: #d4d0cb; max-width: 560px; }
+    .book__img { margin: 0; }
+    .book__img img { width: 100%; height: auto; }
+    @media (max-width: 900px) { .book { grid-template-columns: 1fr; } }
+  </style>
+</Base>

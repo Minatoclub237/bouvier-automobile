@@ -1,15 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
 import { services } from '../data/site.js';
-const args = ['Vente au meilleur prix', 'Nous gérons tout', 'Paiement sécurisé', 'Accompagnement personnalisé', 'Démarches administratives incluses', 'Acheteurs qualifiés'];
+const args = ['Véhicules propres et entretenus', 'Assurance comprise', 'Réservation en ligne 24 h/24', 'Dernière minute acceptée', 'Équipements hiver sur demande', 'Un interlocuteur réactif'];
 ---
-<Base title="Services : dépôt-vente, garantie, financement, carte grise" description="Intermédiation, dépôt-vente, paiement sécurisé par séquestre, livraison partout en France, garantie mécanique 3 à 48 mois, financement LOA/LLD et carte grise : tous les services de Next Drive.">
+<Base title="Services : location, utilitaires, achat-revente, reprise" description="Location de citadines, d’une compacte cinq places et d’utilitaires à Aix-les-Bains et Annecy, équipements montagne, achat-revente et reprise de véhicules : tous les services de Bouvier Automobile.">
   <section class="phero" id="top">
-    <div class="phero__media"><video data-autoplay muted loop playsinline preload="none" poster="/loops/golf7-habitacle.webp" data-src="/loops/golf7-habitacle.mp4" aria-hidden="true"></video></div>
+    <div class="phero__media"><video data-autoplay muted loop playsinline preload="none" poster="/loops/cockpit.webp" data-src="/loops/cockpit.mp4" aria-hidden="true"></video></div>
     <div class="phero__inner">
-      <span class="label">De l’estimation à l’immatriculation</span>
+      <span class="label">Location · achat-revente · reprise</span>
       <h1 class="js-chars">Nos services</h1>
-      <p>Une gamme complète pour vendre ou acheter une voiture d’occasion sans prise de tête. Vous gardez la main, nous faisons le travail.</p>
+      <p>Louer une voiture pour un week-end, un utilitaire pour un déménagement, ou vendre la vôtre : nous vous accompagnons avec professionnalisme.</p>
     </div>
   </section>
 
@@ -31,9 +31,9 @@ const args = ['Vente au meilleur prix', 'Nous gérons tout', 'Paiement sécuris�
   </section>
 
   <section class="section section--tight">
-    <div class="section__head"><span class="label">Pourquoi Next Drive</span><h2 class="js-chars">Six engagements</h2></div>
+    <div class="section__head"><span class="label">Pourquoi Bouvier Automobile</span><h2 class="js-chars">Six engagements</h2></div>
     <ul class="args">{args.map((a, i) => <li class="js-reveal"><i>0{i + 1}</i>{a}</li>)}</ul>
-    <div class="ctas" style="margin-top:6vh"><a class="cta cta--fill" href="/vendre"><span>Estimation gratuite</span><b aria-hidden="true">→</b></a><a class="cta" href="/stock"><span>Voir le stock</span><b aria-hidden="true">→</b></a></div>
+    <div class="ctas" style="margin-top:6vh"><a class="cta cta--fill" href="/flotte"><span>Voir nos véhicules</span><b aria-hidden="true">→</b></a><a class="cta" href="/vendre"><span>Vendre ma voiture</span><b aria-hidden="true">→</b></a></div>
   </section>
 
   <style>
