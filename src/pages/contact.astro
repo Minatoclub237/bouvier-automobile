@@ -3,9 +3,9 @@ import Base from '../layouts/Base.astro';
 import { site } from '../data/site.js';
 const map = `https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&z=14&hl=fr&output=embed`;
 ---
-<Base title="Contact" description={`Bouvier Automobile, location de véhicules à Aix-les-Bains, Chambéry et Annecy. Tél. ${site.phone}, e-mail ${site.email}. Réservation en ligne sur Turo et Getaround.`}>
+<Base footer="/media/208-lac.webp" title="Contact" description={`Bouvier Automobile, location de véhicules à Aix-les-Bains, Chambéry et Annecy. Tél. ${site.phone}, e-mail ${site.email}. Réservation en ligne sur Turo et Getaround.`}>
   <section class="phero" id="top">
-    <div class="phero__media"><img src="/media/aygo.webp" alt="Toyota Aygo blanche de Bouvier Automobile" /></div>
+    <div class="phero__media"><img src="/media/aygo-face.webp" alt="Toyota Aygo blanche de Bouvier Automobile" /></div>
     <div class="phero__inner">
       <span class="label">Aix-les-Bains · Chambéry · Annecy</span>
       <h1 class="js-chars">Nous contacter</h1>
@@ -62,7 +62,7 @@ const map = `https://www.google.com/maps?q=${encodeURIComponent(site.mapQuery)}&
     .ct__big { font-family: var(--serif); font-size: clamp(38px, 3.4vw, 60px) !important; line-height: 1; }
     .ct__info ul { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; max-width: 360px; }
     .ct__info li { display: flex; justify-content: space-between; border-bottom: 1px solid var(--line); padding: 6px 0; }
-    .ct__map { height: 62vh; background: var(--panel-2) url(/media/twingo-lac.webp) center / cover; position: relative; }
+    .ct__map { height: 62vh; background: var(--panel-2) url(/media/kangoo-face.webp) center / cover; position: relative; }
     .ct__map iframe { width: 100%; height: 100%; border: 0; display: block; filter: grayscale(1) invert(.92) contrast(.9); }
     .ct__mapbtn { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 12px; background: rgba(11,11,12,.72); text-align: center; transition: background .4s; }
     .ct__mapbtn:hover { background: rgba(11,11,12,.55); }

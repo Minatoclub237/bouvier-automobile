@@ -2,14 +2,14 @@
 import Base from '../layouts/Base.astro';
 import { site } from '../data/site.js';
 const chapters = [
-  { k: 'Les débuts', t: 'Louer simplement, au juste prix', p: 'Fabrice Bouvier commence par louer ses voitures entre particuliers, sur Turo et Getaround, autour d’Aix-les-Bains. Son idée : des véhicules fiables, propres et prêts pour la montagne, loués simplement et au meilleur prix.', img: '/media/twingo' },
-  { k: 'La confiance', t: 'Plus de 350 locations', p: `Plus de 350 locations et une note moyenne de ${site.rating.value} / 5 sur ${site.rating.count} avis. Sur Turo, Bouvier Automobile a le statut « Hôte Star », réservé aux hôtes les mieux notés et les plus fiables.`, img: '/media/308-lac-arriere' },
-  { k: 'Aujourd’hui', t: 'Location, achat et revente', p: `En ${site.incorporated}, l’activité devient la société ${site.legal}. Six modèles à louer à Aix-les-Bains et à Annecy, et un nouveau métier : l’achat, la revente et la reprise de véhicules sélectionnés avec soin.`, img: '/media/c1-annecy' },
+  { k: 'Les débuts', t: 'Louer simplement, au juste prix', p: 'Fabrice Bouvier commence par louer ses voitures entre particuliers, sur Turo et Getaround, autour d’Aix-les-Bains. Son idée : des véhicules fiables, propres et prêts pour la montagne, loués simplement et au meilleur prix.', img: '/media/c1-annecy' },
+  { k: 'La confiance', t: 'Plus de 350 locations', p: `Plus de 350 locations et une note moyenne de ${site.rating.value} / 5 sur ${site.rating.count} avis. Sur Turo, Bouvier Automobile a le statut « Hôte Star », réservé aux hôtes les mieux notés et les plus fiables.`, img: '/media/308-lac' },
+  { k: 'Aujourd’hui', t: 'Location, achat et revente', p: `En ${site.incorporated}, l’activité devient la société ${site.legal}. Six modèles à louer à Aix-les-Bains et à Annecy, et un nouveau métier : l’achat, la revente et la reprise de véhicules sélectionnés avec soin.`, img: '/media/aygo' },
 ];
 ---
-<Base title="Qui sommes-nous" description="Bouvier Automobile, entreprise locale fondée par Fabrice Bouvier : location de voitures et d’utilitaires à Aix-les-Bains, Chambéry et Annecy, achat-revente et reprise de véhicules.">
+<Base footer="/media/c1-route.webp" title="Qui sommes-nous" description="Bouvier Automobile, entreprise locale fondée par Fabrice Bouvier : location de voitures et d’utilitaires à Aix-les-Bains, Chambéry et Annecy, achat-revente et reprise de véhicules.">
   <section class="phero" id="top">
-    <div class="phero__media"><img src="/media/308-lac-large.webp" alt="La Peugeot 308 de Bouvier Automobile au bord du lac" /></div>
+    <div class="phero__media"><img src="/media/twingo.webp" alt="La Renault Twingo rouge de Bouvier Automobile" /></div>
     <div class="phero__inner">
       <span class="label">Bouvier Automobile · Aix-les-Bains</span>
       <h1 class="js-chars">Qui sommes-nous</h1>

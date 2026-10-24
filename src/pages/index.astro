@@ -14,7 +14,7 @@ const logos = makes.map((m) => ({ id: m.toLowerCase().normalize('NFD').replace(/
 const row = [...logos, ...logos, ...logos];
 const clip = (t, n = 250) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) + '…' : t);
 ---
-<Base description="Bouvier Automobile, location de voitures et d’utilitaires à Aix-les-Bains, Chambéry et Annecy sur Turo et Getaround, achat-revente et reprise de véhicules. Plus de 350 locations, 4,9 / 5 de moyenne.">
+<Base footer="/media/twingo-route.webp" description="Bouvier Automobile, location de voitures et d’utilitaires à Aix-les-Bains, Chambéry et Annecy sur Turo et Getaround, achat-revente et reprise de véhicules. Plus de 350 locations, 4,9 / 5 de moyenne.">
   <link slot="head" rel="preload" as="image" href="/hero/a-001.webp" fetchpriority="high" />
 
   <!-- 1. HERO : la caméra plonge sur le capot puis entre dans l'habitacle, au rythme du scroll -->
@@ -97,7 +97,7 @@ const clip = (t, n = 250) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) +
       <p class="manifesto__small">Chez Bouvier Automobile, nous privilégions la transparence, la qualité et la satisfaction de nos clients. Chaque véhicule est soigneusement préparé afin de garantir une expérience sans mauvaise surprise.</p>
       <a class="cta" href="/histoire"><span>Qui sommes-nous</span><b aria-hidden="true">→</b></a>
     </div>
-    <figure class="manifesto__img"><img src="/media/308-lac.webp" alt="La Peugeot 308 de Bouvier Automobile au bord du lac" loading="lazy" /></figure>
+    <figure class="manifesto__img"><img src="/media/308-lac-face.webp" alt="La Peugeot 308 de Bouvier Automobile au bord du lac" loading="lazy" /></figure>
   </section>
 
   <!-- 5. SERVICES : chaque image monte et recouvre la précédente -->
@@ -141,7 +141,7 @@ const clip = (t, n = 250) => (t.length > n ? t.slice(0, t.lastIndexOf(' ', n)) +
 
   <!-- 7. FLOTTE → REPRISE : la section suivante recouvre la précédente -->
   <section class="cover cover--a" id="flotte-teaser">
-    <div class="cover__media"><img src="/media/308-lac-large.webp" alt="Peugeot 308 rouge de Bouvier Automobile face au lac" loading="lazy" /></div>
+    <div class="cover__media"><img src="/media/308-lac-trois-quarts.webp" alt="Peugeot 308 rouge de Bouvier Automobile face au lac" loading="lazy" /></div>
     <div class="cover__content">
       <h2 class="cover__title js-chars">Nos véhicules</h2>
       <p>{fleet.length} modèles à louer, des citadines aux utilitaires, à Aix-les-Bains et à Annecy. Réservation en ligne, assurance comprise.</p>

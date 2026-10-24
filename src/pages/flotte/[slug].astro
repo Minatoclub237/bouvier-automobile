@@ -9,6 +9,8 @@ export function getStaticPaths() {
 }
 const { v } = Astro.props;
 const name = `${v.marque} ${v.modele}`;
+// pied de page : la voiture suivante de la flotte, pour ne pas répéter la même image d’une fiche à l’autre
+const next = fleet[(fleet.findIndex((x) => x.ref === v.ref) + 1) % fleet.length];
 const photos = Array.from({ length: v.photos }, (_, i) => String(i + 1).padStart(2, '0'));
 const similar = [...fleet].filter((x) => x.ref !== v.ref).sort((a, b) => (b.categorie === v.categorie) - (a.categorie === v.categorie)).slice(0, 3);
 const specs = [
@@ -22,7 +24,7 @@ const schema = [{
 }];
 const desc = `Location ${name} ${v.annee} à ${v.ville} : ${v.bref} Réservation en ligne sur ${[v.turo && 'Turo', v.getaround && 'Getaround'].filter(Boolean).join(' et ')}, assurance comprise.`;
 ---
-<Base title={`Location ${name} à ${v.ville}`} description={desc} image={`/flotte/${v.ref}/01.webp`} schema={schema}>
+<Base footer={`/flotte/${next.ref}/02.webp`} title={`Location ${name} à ${v.ville}`} description={desc} image={`/flotte/${v.ref}/01.webp`} schema={schema}>
   <section class="veh" id="top">
     <div class="veh__gallery" id="gallery">
       <div class="veh__main">

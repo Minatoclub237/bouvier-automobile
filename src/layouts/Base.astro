@@ -5,7 +5,7 @@ import logoRaw from '../../public/brand/full.svg?raw';
 // vrai logo (BOUVIER AUTOMOBILE + voiture « BA » + LOCATION DE VÉHICULES), vectorisé depuis l'ancien site
 const logo = (cls) => logoRaw.replace(/<svg([^>]*)>/, `<svg class="${cls}"$1 aria-hidden="true" focusable="false">`).replace(' xmlns="http://www.w3.org/2000/svg"', '');
 
-const { title, description, image = '/media/308-lac-large.webp', schema = [], noindex = false } = Astro.props;
+const { title, description, image = '/media/308-lac-trois-quarts.webp', footer = '/media/aygo-arriere.webp', schema = [], noindex = false } = Astro.props;
 const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', site.url).href;
 const path = Astro.url.pathname.replace(/\/$/, '') || '/';
 const fullTitle = title ? `${title} — Bouvier Automobile, Aix-les-Bains (73)` : 'Bouvier Automobile — Location de voitures et d’utilitaires à Aix-les-Bains, Chambéry et Annecy';
@@ -16,7 +16,7 @@ const dealer = {
   name: site.name,
   legalName: site.legal,
   url: site.url,
-  image: `${site.url}/media/308-lac-large.webp`,
+  image: `${site.url}/media/308-lac-trois-quarts.webp`,
   logo: `${site.url}/brand/logo.png`,
   telephone: '+33633273761',
   email: site.email,
@@ -101,8 +101,8 @@ const ld = [dealer, ...schema];
   <footer class="footer" id="contact-footer">
     <div class="footer__hero">
     <div class="footer__media" id="footerMedia" aria-hidden="true">
-      <img class="footer__dim" src="/media/twingo-route.webp" alt="" loading="lazy" />
-      <img class="footer__lit" src="/media/twingo-route.webp" alt="" loading="lazy" />
+      <img class="footer__dim" src={footer} alt="" loading="lazy" />
+      <img class="footer__lit" src={footer} alt="" loading="lazy" />
     </div>
     <div class="footer__content">
       <span class="label">Besoin d’un véhicule ?</span>

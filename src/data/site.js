@@ -48,17 +48,17 @@ export const nav = [
 ];
 
 export const services = [
-  { key: 'citadines', title: 'Citadines', media: { video: '/loops/aygo-route' }, page: '/media/twingo-face',
+  { key: 'citadines', title: 'Citadines', media: { video: '/loops/citadines' }, page: '/media/twingo-face',
     text: 'Twingo, Aygo, C1 et 208 : des petites voitures économiques, faciles à garer, aussi à l’aise en ville que sur les routes de montagne.' },
   { key: 'familiale', title: 'Compacte 5 places', media: { img: '/media/308-route' }, page: '/media/308-interieur',
     text: 'La Peugeot 308 : grand coffre, écran tactile, radar de recul et régulateur. Idéale pour un week-end au bord du lac ou une semaine au ski.' },
   { key: 'utilitaires', title: 'Utilitaires', media: { video: '/loops/kangoo' }, page: '/media/kangoo-cargo',
     text: 'Deux Renault Kangoo de 3 m³ avec girafon de toit : déménagement, meubles, matériaux ou passage à la déchetterie de Drumettaz.' },
-  { key: 'montagne', title: 'Équipés pour la montagne', media: { img: '/media/aygo-interieur' }, page: '/media/c1-interieur',
+  { key: 'montagne', title: 'Équipés pour la montagne', media: { img: '/media/twingo-interieur' }, page: '/media/c1-interieur',
     text: 'Pneus neige, chaînes ou chaussettes, porte-skis, siège bébé ISOFIX et rehausseurs : sur demande, 24 h avant la location.' },
-  { key: 'achat-revente', title: 'Achat & revente', media: { img: '/media/c4-cactus' }, page: '/media/megane-rs',
+  { key: 'achat-revente', title: 'Achat & revente', media: { img: '/media/c4-cactus' }, page: '/media/megane-interieur',
     text: 'Nous achetons et revendons des véhicules sélectionnés avec soin : des voitures fiables, propres et au meilleur prix.' },
-  { key: 'reprise', title: 'Reprise de votre véhicule', media: { img: '/media/megane-interieur' }, page: '/media/twingo-route',
+  { key: 'reprise', title: 'Reprise de votre véhicule', media: { img: '/media/308-poste' }, page: '/media/308-banquette',
     text: 'Roulant ou non, en bon état ou à réparer : une estimation rapide, une offre juste et un rachat simplifié.' },
 ];
 
