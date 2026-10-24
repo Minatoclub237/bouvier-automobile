@@ -1,0 +1,7 @@
+node_modules
+dist
+.DS_Store
+_client/
+.astro/
+spot/out/
+spot/assets/raw/
